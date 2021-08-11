@@ -30,6 +30,15 @@ class QuestionsController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    @question = Question.find(params[:id])
+    if @question.destroy
+      redirect_to root_path, notice: 'Success!'
+    else
+      flash[:alert] = 'Failed!'
+    end
+  end
   
   private
     def question_params
