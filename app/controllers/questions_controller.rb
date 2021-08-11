@@ -26,7 +26,7 @@ class QuestionsController < ApplicationController
     if @question.update(question_params)
       redirect_to root_path, notice: 'Success!'
     else
-      flash[:alert] = 'Falied!'
+      flash[:alert] = 'Failed!'
       render :edit
     end
   end
