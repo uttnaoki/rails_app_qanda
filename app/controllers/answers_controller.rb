@@ -25,6 +25,17 @@ class AnswersController < ApplicationController
     end
   end
   
+  def destroy
+    @question = Question.find(params[:question_id])
+    @answer = @question.answers.find(params[:id])
+    if @answer.destroy
+      redirect_to question_path(@question), notice: 'Deleted!'
+    else
+      flash[:alert] = 'Failed!'
+      render :edit
+    end
+  end
+  
   private
     def answer_params
       params.require(:answer).permit(:question_id, :name, :content)
