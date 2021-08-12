@@ -2,6 +2,8 @@
 
 ## 概要
 - Udemyの講座で勉強したアプリ
+  - はじめてのRuby on Rails入門-RubyとRailsを基礎から学びWebアプリケーションをネットに公開しよう
+  - https://www.udemy.com/course/the-ultimate-ruby-on-rails-bootcamp/
 - Ruby on Rails
 
 ## メモ
